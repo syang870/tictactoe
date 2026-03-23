@@ -29,7 +29,7 @@ test('can start a new game', async ({ formPage, boardPage, page }) => {
   await formPage.submit();
 
   const board = page.getByTestId('table').locator('tr');
-  const firstCell = page.getByTestId('table').getByTestId('1');
+  const firstCell = page.getByTestId('table').getByTestId('0');
   await expect(board).toHaveCount(3);
   await expect(firstCell).not.toContainText('X');
 });
